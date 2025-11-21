@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrekenen - Agape Pedicure Webshop</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="webshop.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure" style="height: 50px; width: auto;">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <h1 class="checkout-title">Afrekenen</h1>
+            
+            <div class="checkout-grid">
+                <!-- Left Column: Customer Details & Shipping -->
+                <div class="checkout-forms">
+                    
+                    <!-- Step Indicator -->
+                    <div class="checkout-steps">
+                        <div class="checkout-step active">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Gegevens</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="checkout-step">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Levering</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="checkout-step">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Betaling</span>
+                        </div>
+                    </div>
+
+                    <!-- Customer Information -->
+                    <div class="checkout-card">
+                        <h3><i class="fas fa-user"></i> Uw Gegevens</h3>
+                        <form id="checkoutForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Voornaam *</label>
+                                    <input type="text" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Achternaam *</label>
+                                    <input type="text" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>E-mailadres *</label>
+                                <input type="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Telefoonnummer *</label>
+                                <input type="tel" name="phone" required>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Shipping Address -->
+                    <div class="checkout-card">
+                        <h3><i class="fas fa-truck"></i> Verzendadres</h3>
+                        <form id="shippingForm">
+                            <div class="form-group">
+                                <label>Straat en huisnummer *</label>
+                                <input type="text" name="address" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Postcode *</label>
+                                    <input type="text" name="zipcode" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Plaats *</label>
+                                    <input type="text" name="city" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Land *</label>
+                                <select name="country" required>
+                                    <option value="NL" selected>Nederland</option>
+                                    <option value="BE">België</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Opmerkingen (optioneel)</label>
+                                <textarea name="notes" rows="3" placeholder="Speciale instructies voor bezorging"></textarea>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="checkout-card">
+                        <h3><i class="fas fa-credit-card"></i> Betaalmethode</h3>
+                        
+                        <div class="payment-methods-checkout">
+                            <div class="payment-option-checkout active" data-method="ideal">
+                                <input type="radio" name="payment" id="checkoutIdeal" value="ideal" checked>
+                                <label for="checkoutIdeal">
+                                    <div class="payment-icon">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/ING_Group_N.V._Logo.svg/120px-ING_Group_N.V._Logo.svg.png" alt="iDEAL" style="height: 30px;">
+                                    </div>
+                                    <div class="payment-details">
+                                        <strong>iDEAL</strong>
+                                        <span>Betaal direct via uw bank</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-option-checkout" data-method="creditcard">
+                                <input type="radio" name="payment" id="checkoutCard" value="creditcard">
+                                <label for="checkoutCard">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-credit-card" style="font-size: 30px; color: #2E7A85;"></i>
+                                    </div>
+                                    <div class="payment-details">
+                                        <strong>Credit Card</strong>
+                                        <span>Visa, Mastercard, American Express</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="payment-option-checkout" data-method="paypal">
+                                <input type="radio" name="payment" id="checkoutPaypal" value="paypal">
+                                <label for="checkoutPaypal">
+                                    <div class="payment-icon">
+                                        <i class="fab fa-paypal" style="font-size: 30px; color: #0070ba;"></i>
+                                    </div>
+                                    <div class="payment-details">
+                                        <strong>PayPal</strong>
+                                        <span>Betaal met uw PayPal account</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- iDEAL Bank Selection -->
+                        <div id="idealBankSelect" class="bank-selection">
+                            <label>Selecteer uw bank:</label>
+                            <select id="idealBank" class="form-control">
+                                <option value="">Kies uw bank...</option>
+                                <option value="abn_amro">ABN AMRO</option>
+                                <option value="ing">ING</option>
+                                <option value="rabobank">Rabobank</option>
+                                <option value="sns">SNS Bank</option>
+                                <option value="triodos">Triodos Bank</option>
+                                <option value="van_lanschot">Van Lanschot</option>
+                                <option value="knab">Knab</option>
+                                <option value="bunq">bunq</option>
+                                <option value="regiobank">RegioBank</option>
+                                <option value="revolut">Revolut</option>
+                            </select>
+                        </div>
+
+                        <!-- Credit Card Fields -->
+                        <div id="creditCardFields" style="display: none;">
+                            <div id="card-element" class="stripe-card-element"></div>
+                            <div id="card-errors" class="payment-error"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Order Summary -->
+                <div class="order-summary">
+                    <h3>Bestelling Overzicht</h3>
+                    
+                    <div class="summary-items" id="summaryItems">
+                        <!-- Items will be inserted here -->
+                    </div>
+                    
+                    <div class="summary-calculations">
+                        <div class="summary-row">
+                            <span>Subtotaal</span>
+                            <span id="summarySubtotal">€0,00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Verzendkosten</span>
+                            <span id="summaryShipping">€4,95</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>BTW (21%)</span>
+                            <span id="summaryVAT">€0,00</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-row total">
+                            <span>Totaal</span>
+                            <strong id="summaryTotal">€0,00</strong>
+                        </div>
+                    </div>
+                    
+                    <button class="complete-order-btn" onclick="completeOrder()">
+                        <i class="fas fa-lock"></i> Bestelling Plaatsen
+                    </button>
+                    
+                    <div class="security-badges">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Veilige betaling via SSL</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure" style="height: 60px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1rem;">
+                    <p>Premium voetenverzorging in een luxueuze en serene omgeving.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Snelle Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="webshop.html">Webshop</a></li>
+                        <li><a href="tarieven.html">Tarieven</a></li>
+                        <li><a href="boeken.html">Afspraak Maken</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="webshop.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
+
+
+
+
+

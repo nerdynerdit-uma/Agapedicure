@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #2E7A85;
+    --primary-dark: #1f5259;
+    --primary-light: #4a9da8;
+  }
+  
+  * {
+    @apply border-neutral-200;
+  }
+  
+  body {
+    @apply font-sans;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl;
+  }
+  
+  .glass-dark {
+    @apply bg-neutral-900/80 backdrop-blur-xl;
+  }
+  
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary to-primary-light;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-br from-primary to-primary-light bg-clip-text text-transparent;
+  }
+  
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24 xl:px-32 2xl:px-48;
+  }
+  
+  .container-luxury {
+    @apply max-w-[1800px] mx-auto section-padding;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* Selection */
+::selection {
+  @apply bg-primary/20 text-primary-dark;
+}
+
+/* Focus visible */
+:focus-visible {
+  @apply outline-2 outline-offset-4 outline-primary;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High-res image optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Animation utilities */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
+
+
+
+
+

@@ -1,0 +1,24 @@
+UPLOAD THESE 2 IMAGES:
+
+1. featureimage.jpg
+   - Professional photo (woman with glasses on green background)
+   - Will appear in LEFT circular frame (side-by-side layout)
+   
+2. treatmentimage.jpg  
+   - Pedicure treatment photo (professional treating client's foot)
+   - Will appear in RIGHT circular frame (side-by-side layout)
+
+LOCATION: Both images will display side-by-side, centered, 
+just above "Premium Behandelingen" section
+
+SPECIFICATIONS:
+- Format: JPG
+- Size: 800x800 pixels or larger (square images work best)
+- Quality: High (90%)
+
+Place both images in this 'images' folder with EXACT file names:
+- featureimage.jpg
+- treatmentimage.jpg
+
+Then refresh your browser to see them!
+

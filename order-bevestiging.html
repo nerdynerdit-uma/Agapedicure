@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestelling Bevestigd - Agape Pedicure</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure" style="height: 50px; width: auto;">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Order Confirmation -->
+    <section class="confirmation-section">
+        <div class="container">
+            <div class="confirmation-card">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                
+                <h1>Bestelling Bevestigd!</h1>
+                <p class="confirmation-subtitle">Bedankt voor uw bestelling. U ontvangt een bevestigingsmail met alle details.</p>
+                
+                <div class="order-number">
+                    <span>Bestelnummer:</span>
+                    <strong id="orderNumber">-</strong>
+                </div>
+                
+                <div class="order-details" id="orderDetails">
+                    <!-- Order details will be inserted here -->
+                </div>
+                
+                <div class="confirmation-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Terug naar Home
+                    </a>
+                    <a href="webshop.html" class="btn btn-outline">
+                        <i class="fas fa-shopping-bag"></i> Verder Winkelen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure" style="height: 60px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1rem;">
+                    <p>Premium voetenverzorging en wellness producten.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Display order confirmation
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderData = JSON.parse(localStorage.getItem('lastOrder'));
+            
+            if (!orderData) {
+                window.location.href = 'webshop.html';
+                return;
+            }
+            
+            // Generate order number
+            const orderNumber = 'AG' + Date.now().toString().slice(-8);
+            document.getElementById('orderNumber').textContent = orderNumber;
+            
+            // Display order details
+            let html = `
+                <div class="order-info-section">
+                    <h3>Bezorgadres:</h3>
+                    <p>
+                        ${orderData.customer.firstName} ${orderData.customer.lastName}<br>
+                        ${orderData.shipping.address}<br>
+                        ${orderData.shipping.zipcode} ${orderData.shipping.city}<br>
+                        ${orderData.shipping.country}
+                    </p>
+                </div>
+                
+                <div class="order-info-section">
+                    <h3>Contact:</h3>
+                    <p>
+                        Email: ${orderData.customer.email}<br>
+                        Telefoon: ${orderData.customer.phone}
+                    </p>
+                </div>
+                
+                <div class="order-info-section">
+                    <h3>Betaalmethode:</h3>
+                    <p>${orderData.payment.method.toUpperCase()}</p>
+                </div>
+                
+                <div class="order-info-section">
+                    <h3>Bestelde producten:</h3>
+                    <ul class="ordered-items">
+                        ${orderData.items.map(item => `
+                            <li>${item.quantity}x ${item.name} - €${(item.price * item.quantity).toFixed(2).replace('.', ',')}</li>
+                        `).join('')}
+                    </ul>
+                </div>
+                
+                <div class="order-total-display">
+                    <span>Totaalbedrag:</span>
+                    <strong>€${orderData.total.toFixed(2).replace('.', ',')}</strong>
+                </div>
+            `;
+            
+            document.getElementById('orderDetails').innerHTML = html;
+        });
+    </script>
+    
+    <style>
+        .confirmation-section {
+            padding: 150px 0 var(--spacing-xxl);
+            background: var(--off-white);
+            min-height: 80vh;
+        }
+        
+        .confirmation-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .confirmation-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto var(--spacing-md);
+            border-radius: 50%;
+            background: #27ae60;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .confirmation-icon i {
+            font-size: 4rem;
+            color: var(--white);
+        }
+        
+        .confirmation-card h1 {
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .confirmation-subtitle {
+            font-size: 1.125rem;
+            color: var(--dark-gray);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .order-number {
+            background: var(--light-gray);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            font-size: 1.125rem;
+        }
+        
+        .order-number strong {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-family: var(--font-primary);
+        }
+        
+        .order-details {
+            text-align: left;
+            background: var(--light-gray);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .order-info-section {
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .order-info-section:last-child {
+            border-bottom: none;
+        }
+        
+        .order-info-section h3 {
+            font-size: 1.125rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .ordered-items {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ordered-items li {
+            padding: 0.5rem 0;
+            color: var(--dark-gray);
+        }
+        
+        .order-total-display {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            padding-top: var(--spacing-md);
+            margin-top: var(--spacing-md);
+            border-top: 2px solid var(--primary-color);
+        }
+        
+        .order-total-display strong {
+            color: var(--primary-color);
+            font-family: var(--font-primary);
+        }
+        
+        .confirmation-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</body>
+</html>
+
+
+
+
+

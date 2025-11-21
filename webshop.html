@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agape Pedicure Webshop - Premium geurproducten voor uw welzijn">
+    <title>Webshop - Agape Pedicure</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="webshop.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure & Wellness Salon" style="height: 50px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Welkom</a></li>
+                <li><a href="index.html#over" class="nav-link">Over Ons</a></li>
+                <li class="dropdown">
+                    <a href="index.html#diensten" class="nav-link">Behandelingen <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#manicure">Manicure</a></li>
+                        <li><a href="#pedicure">Pedicure</a></li>
+                        <li><a href="#voetmassage">Voet Massage</a></li>
+                    </ul>
+                </li>
+                <li><a href="tarieven.html" class="nav-link">Tarieven</a></li>
+                <li><a href="webshop.html" class="nav-link active">Webshop</a></li>
+                <li><a href="index.html#footer" class="nav-link">Contact</a></li>
+                <li><a href="boeken.html" class="nav-link btn-nav">Maak Een Afspraak</a></li>
+            </ul>
+            <!-- Cart Icon -->
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Webshop Header -->
+    <section class="webshop-header">
+        <div class="container">
+            <h1 class="page-title">Webshop</h1>
+            <p class="page-subtitle">Premium geurproducten voor uw welzijn en ontspanning</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-card" data-product="1">
+                    <div class="product-image">
+                        <img src="images/products/product1-main.png" alt="Lavendel Geur" class="main-image" loading="lazy">
+                        <div class="product-badge">Bestseller</div>
+                        <button class="quick-view-btn" onclick="openProductModal(1)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Lavendel Rustgevend</h3>
+                        <p class="product-desc">Kalmerende lavendelgeur voor ultieme ontspanning</p>
+                        <div class="product-meta">
+                            <span class="product-price">€24,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(1, 'Lavendel Rustgevend', 24.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-product="2">
+                    <div class="product-image">
+                        <img src="images/products/product2-main.png" alt="Eucalyptus Geur" class="main-image" loading="lazy">
+                        <button class="quick-view-btn" onclick="openProductModal(2)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Eucalyptus Verfrissend</h3>
+                        <p class="product-desc">Verkwikkende eucalyptus voor een frisse start</p>
+                        <div class="product-meta">
+                            <span class="product-price">€22,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(2, 'Eucalyptus Verfrissend', 22.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-product="3">
+                    <div class="product-image">
+                        <img src="images/products/product3-main.png" alt="Roos Geur" class="main-image" loading="lazy">
+                        <div class="product-badge luxury">Luxe</div>
+                        <button class="quick-view-btn" onclick="openProductModal(3)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Roos Elegantie</h3>
+                        <p class="product-desc">Luxueuze rozengeur voor een elegante sfeer</p>
+                        <div class="product-meta">
+                            <span class="product-price">€29,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(3, 'Roos Elegantie', 29.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-product="4">
+                    <div class="product-image">
+                        <img src="images/products/product4-main.png" alt="Jasmijn Geur" class="main-image" loading="lazy">
+                        <button class="quick-view-btn" onclick="openProductModal(4)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Jasmijn Sereniteit</h3>
+                        <p class="product-desc">Zachte jasmijngeur voor innerlijke rust</p>
+                        <div class="product-meta">
+                            <span class="product-price">€26,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(4, 'Jasmijn Sereniteit', 26.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-product="5">
+                    <div class="product-image">
+                        <img src="images/products/product5-main.png" alt="Citroen Geur" class="main-image" loading="lazy">
+                        <button class="quick-view-btn" onclick="openProductModal(5)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Citroen Energie</h3>
+                        <p class="product-desc">Energieke citroengeur voor een boost</p>
+                        <div class="product-meta">
+                            <span class="product-price">€21,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(5, 'Citroen Energie', 21.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-product="6">
+                    <div class="product-image">
+                        <img src="images/products/product6-main.png" alt="Sandelhout Geur" class="main-image" loading="lazy">
+                        <div class="product-badge luxury">Premium</div>
+                        <button class="quick-view-btn" onclick="openProductModal(6)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sandelhout Harmonie</h3>
+                        <p class="product-desc">Warme sandelhoutalsdoordrenkt met rust</p>
+                        <div class="product-meta">
+                            <span class="product-price">€32,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(6, 'Sandelhout Harmonie', 32.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-product="7">
+                    <div class="product-image">
+                        <img src="images/products/product7-main.png" alt="Vanille Geur" class="main-image" loading="lazy">
+                        <button class="quick-view-btn" onclick="openProductModal(7)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Vanille Warmte</h3>
+                        <p class="product-desc">Zoete vanillegeur voor gezelligheid</p>
+                        <div class="product-meta">
+                            <span class="product-price">€23,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(7, 'Vanille Warmte', 23.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-product="8">
+                    <div class="product-image">
+                        <img src="images/purple_perfume.png" alt="Mint Geur" class="main-image" loading="lazy">
+                        <button class="quick-view-btn" onclick="openProductModal(8)">
+                            <i class="fas fa-eye"></i> Bekijk Details
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pepermunt Frisheid</h3>
+                        <p class="product-desc">Verfrissende muntgeur voor helderheid</p>
+                        <div class="product-meta">
+                            <span class="product-price">€20,95</span>
+                            <span class="product-volume">100ml</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(8, 'Pepermunt Frisheid', 20.95)">
+                            <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Winkelwagen</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Uw winkelwagen is leeg</p>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Totaal:</span>
+                <strong id="cartTotal">€0,00</strong>
+            </div>
+            <button class="btn btn-primary" onclick="goToCheckout()">
+                <i class="fas fa-lock"></i> Afrekenen
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="main-image-container">
+                        <img src="" alt="" id="modalMainImage">
+                    </div>
+                    <div class="thumbnail-gallery" id="modalThumbnails">
+                        <!-- Thumbnails will be inserted here -->
+                    </div>
+                </div>
+                
+                <div class="modal-info">
+                    <h2 id="modalProductTitle"></h2>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <div class="modal-volume" id="modalVolume"></div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    
+                    <div class="product-features">
+                        <h4>Kenmerken:</h4>
+                        <ul id="modalFeatures"></ul>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label>Aantal:</label>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="modalQuantity" value="1" min="1" max="10">
+                            <button onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                    
+                    <button class="add-to-cart-btn large" id="modalAddToCart">
+                        <i class="fas fa-shopping-bag"></i> In Winkelwagen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeProductModal()"></div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure" style="height: 60px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1rem;">
+                    <p>Premium voetenverzorging in een luxueuze en serene omgeving. Wij staan voor kwaliteit, hygiëne en persoonlijke aandacht.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Snelle Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Welkom</a></li>
+                        <li><a href="index.html#over">Over Ons</a></li>
+                        <li><a href="index.html#diensten">Behandelingen</a></li>
+                        <li><a href="tarieven.html">Tarieven</a></li>
+                        <li><a href="webshop.html">Webshop</a></li>
+                        <li><a href="boeken.html">Maak Een Afspraak</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Informatie</h4>
+                    <ul>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#cookies">Cookies Beleid</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
+                        <li><a href="#verzending">Verzending & Retour</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Locatie's</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <div>
+                                <strong>Leerdam</strong><br>
+                                Eiland 1, unit 0.6<br>
+                                4143 EN Leerdam<br>
+                                <em>(Op de vrijdagen)</em>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <div>
+                                <strong>Roelofarendsveen</strong><br>
+                                Stationsstraat 1V<br>
+                                2371 SH Roelofarendsveen<br>
+                                <em>(Op de dinsdagen)</em>
+                            </div>
+                        </li>
+                        <li><i class="fas fa-phone"></i> 06 49121690</li>
+                        <li><i class="fas fa-envelope"></i> info@agapepedicure.nl</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agape Pedicure. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacybeleid</a>
+                    <a href="#cookies">Algemene Voorwaarden</a>
+                    <a href="#cookies">Cookie Beleid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="webshop.js"></script>
+</body>
+</html>
+
+
+
+
+

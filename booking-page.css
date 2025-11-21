@@ -1,0 +1,50 @@
+/* ===================================
+   Booking Page Specific Styles
+   =================================== */
+
+.page-header-booking {
+    padding: 150px 0 80px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+}
+
+.page-title-booking {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--white);
+}
+
+.page-subtitle-booking {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.booking-page {
+    padding: var(--spacing-xxl) 0;
+    background: var(--off-white);
+}
+
+.booking-page .booking-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+@media (max-width: 1200px) {
+    .booking-page .booking-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+

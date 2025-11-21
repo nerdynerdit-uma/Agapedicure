@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agape Pedicure - Onze tarieven en behandelingen">
+    <meta name="keywords" content="pedicure prijzen, tarieven, voetmassage, medische pedicure">
+    <title>Onze Tarieven - Agape Pedicure</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2E7A85">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure & Wellness Salon" style="height: 50px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Welkom</a></li>
+                <li><a href="index.html#over" class="nav-link">Over Ons</a></li>
+                <li class="dropdown">
+                    <a href="index.html#diensten" class="nav-link">Behandelingen <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#manicure">Manicure</a></li>
+                        <li><a href="#pedicure">Pedicure</a></li>
+                        <li><a href="#voetmassage">Voet Massage</a></li>
+                    </ul>
+                </li>
+                <li><a href="tarieven.html" class="nav-link active">Tarieven</a></li>
+                <li><a href="webshop.html" class="nav-link">Webshop</a></li>
+                <li><a href="index.html#footer" class="nav-link">Contact</a></li>
+                <li><a href="boeken.html" class="nav-link btn-nav">Maak Een Afspraak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Pricing Page -->
+    <section class="pricing-page">
+        <div class="container" style="padding-top: 3rem;">
+            <div class="section-header">
+                <h2 class="section-title" style="text-align: center;">Onze Tarieven</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Agape Deluxe - Basis Pedicure -->
+            <div class="treatment-detail-card">
+                <div class="treatment-detail-header">
+                    <h3>Agape Deluxe – Basis Pedicure</h3>
+                    <div class="treatment-price-tag">
+                        <span class="from-price">vanaf</span>
+                        <span class="main-price">€47,50</span>
+                    </div>
+                </div>
+                <p class="treatment-description">
+                    <strong>Behandeling:</strong> Voeten desinfecteren met alcohol, teennagels knippen, nagelomgeving verzorgen, eelt verwijderen, afsluiten met hydraterend crème.
+                </p>
+                <div class="extras-table">
+                    <h4>Extra opties:</h4>
+                    <table>
+                        <tr>
+                            <td>Meerprijs 15 min (in overleg)</td>
+                            <td class="price-col">€12,50</td>
+                        </tr>
+                        <tr>
+                            <td>Nagellak verwijderen</td>
+                            <td class="price-col">€5,00</td>
+                        </tr>
+                        <tr>
+                            <td>Nagels lakken (inclusief nagellak)</td>
+                            <td class="price-col">€12,50</td>
+                        </tr>
+                        <tr>
+                            <td>Nagels lakken (eigen nagellak)</td>
+                            <td class="price-col">€8,95</td>
+                        </tr>
+                        <tr>
+                            <td>Voetmassage i.c.m. pedicure (15 min)</td>
+                            <td class="price-col">€10,00</td>
+                        </tr>
+                    </table>
+                </div>
+                <a href="boeken.html" class="btn btn-primary">Boek Deze Behandeling</a>
+            </div>
+
+            <!-- Agape Medisch Pedicure -->
+            <div class="treatment-detail-card featured">
+                <div class="featured-tag">
+                    <i class="fas fa-star"></i> Medische Zorg
+                </div>
+                <div class="treatment-detail-header">
+                    <h3>Agape Medisch Pedicure</h3>
+                    <div class="treatment-price-tag">
+                        <span class="from-price">vanaf</span>
+                        <span class="main-price">€50,00</span>
+                    </div>
+                </div>
+                <p class="treatment-description">
+                    <strong>Behandeling:</strong> Voor voeten met verhoogd risico zoals diabetisch, reuma, spasme, ouderen en verwaarloosde voeten. Het verwijderen van weke/likdoorn, kloven en afvlakken van kalknagels (schimmelnagels) horen tot de behandeling.
+                </p>
+                <div class="insurance-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <p>In sommige situaties kan de voetbehandeling gedeclareerd worden bij de zorgverzekering.</p>
+                </div>
+                <div class="extras-table">
+                    <h4>Extra opties:</h4>
+                    <table>
+                        <tr>
+                            <td>Meerprijs 15 min (in overleg)</td>
+                            <td class="price-col">€12,50</td>
+                        </tr>
+                        <tr>
+                            <td>Nagellak verwijderen</td>
+                            <td class="price-col">€5,00</td>
+                        </tr>
+                        <tr>
+                            <td>Nagels lakken (inclusief nagellak)</td>
+                            <td class="price-col">€12,50</td>
+                        </tr>
+                        <tr>
+                            <td>Nagels lakken (eigen nagellak)</td>
+                            <td class="price-col">€8,95</td>
+                        </tr>
+                        <tr>
+                            <td>Voetmassage i.c.m. pedicure (15 min)</td>
+                            <td class="price-col">€10,00</td>
+                        </tr>
+                    </table>
+                </div>
+                <a href="boeken.html" class="btn btn-primary">Boek Deze Behandeling</a>
+            </div>
+
+            <!-- Bindweefsel Gezichtsmassage -->
+            <div class="treatment-detail-card">
+                <div class="treatment-detail-header">
+                    <h3>Bindweefsel Gezichtsmassage</h3>
+                </div>
+                <p class="treatment-description">
+                    Deze stevige en huid verbeterende gezichtsmassage richt zich op de dieper gelegen huidlagen. De massage bevordert de doorbloeding en stimuleert de aanmaak van collageen en elastine waardoor je huid vernieuwt en verstevigt. Een bindweefselmassage voor het gezicht is effectief bij rimpeltjes en bepaalde huidproblemen.
+                </p>
+                <div class="recommendation-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Voor een optimaal resultaat is het aan te raden om een kuur van meerdere behandelingen te nemen.</p>
+                </div>
+                <div class="treatment-options">
+                    <div class="option-row">
+                        <div class="option-info">
+                            <strong>Hele Gelaatsbehandeling</strong>
+                            <span>50 minuten</span>
+                        </div>
+                        <span class="option-price">€80,00</span>
+                    </div>
+                    <div class="option-row">
+                        <div class="option-info">
+                            <strong>Back and Neck</strong>
+                            <span>30 minuten</span>
+                        </div>
+                        <span class="option-price">€35,00</span>
+                    </div>
+                </div>
+                <a href="boeken.html" class="btn btn-primary">Boek Deze Behandeling</a>
+            </div>
+
+            <!-- Neuropathische Pijnmassage -->
+            <div class="treatment-detail-card">
+                <div class="treatment-detail-header">
+                    <h3>Neuropathische Pijnmassage</h3>
+                    <div class="treatment-price-tag">
+                        <span class="main-price">€90,00</span>
+                    </div>
+                </div>
+                <p class="treatment-description">
+                    Verlicht zenuwpijn bij chronische aandoeningen zoals Diabetes of kanker. Acupressuur gericht op pijn, vermoeidheid, spanning, verkramping, misselijkheid, droge huid & mentale ontspanning.
+                </p>
+                <div class="treatment-duration-box">
+                    <i class="fas fa-clock"></i>
+                    <span>Neuro pathische spa massage - 60 minuten</span>
+                </div>
+                <a href="boeken.html" class="btn btn-primary">Boek Deze Behandeling</a>
+            </div>
+
+            <!-- Magnesium Spa Behandeling -->
+            <div class="treatment-detail-card">
+                <div class="treatment-detail-header">
+                    <h3>Magnesium Spa Behandeling</h3>
+                    <div class="treatment-price-tag">
+                        <span class="main-price">€55,00</span>
+                    </div>
+                </div>
+                <p class="treatment-description">
+                    Magnesiumzouten of -olie worden via de huid opgenomen. Helpt bij spierpijn, krampen, zenuwpijn, stress, vermoeidheid, en bevordert ontgiften van het lichaam.
+                </p>
+                <div class="treatment-duration-box">
+                    <i class="fas fa-clock"></i>
+                    <span>45 minuten</span>
+                </div>
+                <a href="boeken.html" class="btn btn-primary">Boek Deze Behandeling</a>
+            </div>
+
+            <!-- Nagelcorrectie -->
+            <div class="treatment-detail-card compact">
+                <div class="treatment-detail-header">
+                    <h3>Nagelcorrectie</h3>
+                    <div class="treatment-price-tag">
+                        <span class="main-price">€35,00</span>
+                    </div>
+                </div>
+                <p class="treatment-description">
+                    Wij gebruiken de methode om herstellen van de nagelplaat door middel van gel techniek, zoals gespleten of schimmelnagels.
+                </p>
+                <a href="boeken.html" class="btn btn-outline">Boek Nu</a>
+            </div>
+
+            <!-- Orthese -->
+            <div class="treatment-detail-card compact">
+                <div class="treatment-detail-header">
+                    <h3>Orthese</h3>
+                    <div class="treatment-price-tag">
+                        <span class="main-price">€40,00</span>
+                    </div>
+                </div>
+                <p class="treatment-description">
+                    Siliconen hulpmiddel om teenklachten (wrijving) te voorkomen en drukpunten te verlichten.
+                </p>
+                <a href="boeken.html" class="btn btn-outline">Boek Nu</a>
+            </div>
+
+            <div class="pricing-note">
+                <p><i class="fas fa-info-circle"></i> Alle prijzen zijn inclusief BTW. Speciale behandelingen op aanvraag.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure" style="height: 60px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1rem;">
+                    <p>Premium voetenverzorging in een luxueuze en serene omgeving. Wij staan voor kwaliteit, hygiëne en persoonlijke aandacht.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Snelle Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Welkom</a></li>
+                        <li><a href="index.html#over">Over Ons</a></li>
+                        <li><a href="index.html#diensten">Behandelingen</a></li>
+                        <li><a href="tarieven.html">Tarieven</a></li>
+                        <li><a href="webshop.html">Webshop</a></li>
+                        <li><a href="boeken.html">Maak Een Afspraak</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Informatie</h4>
+                    <ul>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#cookies">Cookies Beleid</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Locatie's</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <div>
+                                <strong>Leerdam</strong><br>
+                                Eiland 1, unit 0.6<br>
+                                4143 EN Leerdam<br>
+                                <em>(Op de vrijdagen)</em>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <div>
+                                <strong>Roelofarendsveen</strong><br>
+                                Stationsstraat 1V<br>
+                                2371 SH Roelofarendsveen<br>
+                                <em>(Op de dinsdagen)</em>
+                            </div>
+                        </li>
+                        <li><i class="fas fa-phone"></i> 06 49121690</li>
+                        <li><i class="fas fa-envelope"></i> info@agapepedicure.nl</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agape Pedicure. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacybeleid</a>
+                    <a href="#cookies">Algemene Voorwaarden</a>
+                    <a href="#cookies">Cookie Beleid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

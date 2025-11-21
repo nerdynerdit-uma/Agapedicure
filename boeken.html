@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maak een afspraak bij Agape Pedicure - Premium voetenverzorging">
+    <meta name="keywords" content="pedicure, afspraak maken, booking, voetenverzorging">
+    <title>Maak Een Afspraak - Agape Pedicure</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2E7A85">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking-page.css">
+    <link rel="stylesheet" href="booking-system.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure & Wellness Salon" style="height: 50px; width: auto;">
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Welkom</a></li>
+                <li><a href="index.html#over" class="nav-link">Over Ons</a></li>
+                <li class="dropdown">
+                    <a href="index.html#diensten" class="nav-link">Behandelingen <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#manicure">Manicure</a></li>
+                        <li><a href="#pedicure">Pedicure</a></li>
+                        <li><a href="#voetmassage">Voet Massage</a></li>
+                    </ul>
+                </li>
+                <li><a href="tarieven.html" class="nav-link">Tarieven</a></li>
+                <li><a href="webshop.html" class="nav-link">Webshop</a></li>
+                <li><a href="index.html#footer" class="nav-link">Contact</a></li>
+                <li><a href="boeken.html" class="nav-link btn-nav active">Maak Een Afspraak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Booking Page Header -->
+    <section class="page-header-booking">
+        <div class="container">
+            <h1 class="page-title-booking">Maak Een Afspraak</h1>
+            <p class="page-subtitle-booking">Kies een datum en tijd die het beste bij u past. Wij kijken ernaar uit u te verwelkomen!</p>
+        </div>
+    </section>
+
+    <!-- Booking System -->
+    <section class="booking-page" id="boeken">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="booking-progress">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Behandeling</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Locatie & Tijd</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Gegevens</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Betaling</div>
+                </div>
+            </div>
+
+            <!-- Booking Form Container -->
+            <div class="booking-form-container">
+                
+                <!-- Step 1: Select Treatment -->
+                <div class="booking-step" id="step1" style="display: block;">
+                    <h2 class="step-title">Kies uw behandeling</h2>
+                    <p class="step-description">Selecteer de behandeling die u wenst</p>
+                    
+                    <div class="treatment-selection-grid">
+                        <!-- Treatment Options -->
+                        <div class="treatment-option" data-treatment="deluxe" data-price="47.50" data-duration="60">
+                            <div class="treatment-header">
+                                <h3>Agape Deluxe Pedicure</h3>
+                                <span class="treatment-badge">Populair</span>
+                            </div>
+                            <p class="treatment-desc">Basis pedicure met volledige verzorging</p>
+                            <div class="treatment-meta">
+                                <span class="price">€47,50</span>
+                                <span class="duration">60 min</span>
+                            </div>
+                        </div>
+
+                        <div class="treatment-option" data-treatment="medisch" data-price="50.00" data-duration="60">
+                            <div class="treatment-header">
+                                <h3>Medisch Pedicure</h3>
+                                <span class="treatment-badge featured">Medisch</span>
+                            </div>
+                            <p class="treatment-desc">Voor diabetische en risico voeten</p>
+                            <div class="treatment-meta">
+                                <span class="price">€50,00</span>
+                                <span class="duration">60 min</span>
+                            </div>
+                        </div>
+
+                        <div class="treatment-option" data-treatment="bindweefsel-50" data-price="80.00" data-duration="50">
+                            <div class="treatment-header">
+                                <h3>Gezichtsbehandeling</h3>
+                            </div>
+                            <p class="treatment-desc">Hele gelaatsbehandeling</p>
+                            <div class="treatment-meta">
+                                <span class="price">€80,00</span>
+                                <span class="duration">50 min</span>
+                            </div>
+                        </div>
+
+                        <div class="treatment-option" data-treatment="bindweefsel-30" data-price="35.00" data-duration="30">
+                            <div class="treatment-header">
+                                <h3>Back & Neck</h3>
+                            </div>
+                            <p class="treatment-desc">Nek en rug massage</p>
+                            <div class="treatment-meta">
+                                <span class="price">€35,00</span>
+                                <span class="duration">30 min</span>
+                            </div>
+                        </div>
+
+                        <div class="treatment-option" data-treatment="neuropathisch" data-price="90.00" data-duration="60">
+                            <div class="treatment-header">
+                                <h3>Neuropathische Massage</h3>
+                            </div>
+                            <p class="treatment-desc">Voor zenuwpijn en chronische aandoeningen</p>
+                            <div class="treatment-meta">
+                                <span class="price">€90,00</span>
+                                <span class="duration">60 min</span>
+                            </div>
+                        </div>
+
+                        <div class="treatment-option" data-treatment="magnesium" data-price="55.00" data-duration="45">
+                            <div class="treatment-header">
+                                <h3>Magnesium Spa</h3>
+                            </div>
+                            <p class="treatment-desc">Ontspanning en spierpijn verlichten</p>
+                            <div class="treatment-meta">
+                                <span class="price">€55,00</span>
+                                <span class="duration">45 min</span>
+                            </div>
+                        </div>
+
+                        <div class="treatment-option" data-treatment="nagelcorrectie" data-price="35.00" data-duration="30">
+                            <div class="treatment-header">
+                                <h3>Nagelcorrectie</h3>
+                            </div>
+                            <p class="treatment-desc">Gel techniek voor nagelplaat</p>
+                            <div class="treatment-meta">
+                                <span class="price">€35,00</span>
+                                <span class="duration">30 min</span>
+                            </div>
+                        </div>
+
+                        <div class="treatment-option" data-treatment="orthese" data-price="40.00" data-duration="30">
+                            <div class="treatment-header">
+                                <h3>Orthese</h3>
+                            </div>
+                            <p class="treatment-desc">Siliconen hulpmiddel voor teenklachten</p>
+                            <div class="treatment-meta">
+                                <span class="price">€40,00</span>
+                                <span class="duration">30 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-next" onclick="goToStep(2)">Volgende <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Step 2: Select Location & Time -->
+                <div class="booking-step" id="step2" style="display: none;">
+                    <h2 class="step-title">Kies locatie en tijd</h2>
+                    <p class="step-description">Selecteer waar en wanneer u wilt komen</p>
+                    
+                    <div class="location-selection">
+                        <div class="location-card" data-location="roelofarendsveen" data-day="tuesday">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Roelofarendsveen</h3>
+                            <p>Stationsstraat 1V<br>2371 SH Roelofarendsveen</p>
+                            <span class="location-day">Alleen Dinsdagen</span>
+                        </div>
+                        <div class="location-card" data-location="leerdam" data-day="friday">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Leerdam</h3>
+                            <p>Eiland 1, unit 0.6<br>4143 EN Leerdam</p>
+                            <span class="location-day">Alleen Vrijdagen</span>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Integration -->
+                    <div class="calendar-container" id="calendarContainer" style="display: none;">
+                        <h3>Beschikbare tijden</h3>
+                        <div id="googleCalendar">
+                            <!-- Google Calendar will be loaded here -->
+                            <div class="calendar-placeholder">
+                                <i class="fas fa-calendar-alt"></i>
+                                <p>Selecteer eerst een locatie om beschikbare tijden te zien</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-actions">
+                        <button class="btn-back" onclick="goToStep(1)"><i class="fas fa-arrow-left"></i> Terug</button>
+                        <button class="btn-next" onclick="goToStep(3)" id="nextToStep3" disabled>Volgende <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Customer Details -->
+                <div class="booking-step" id="step3" style="display: none;">
+                    <h2 class="step-title">Uw gegevens</h2>
+                    <p class="step-description">Vul uw contactgegevens in</p>
+                    
+                    <!-- Booking Summary -->
+                    <div class="booking-summary">
+                        <h3>Uw selectie:</h3>
+                        <div class="summary-item">
+                            <span>Behandeling:</span>
+                            <strong id="summaryTreatment">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Locatie:</span>
+                            <strong id="summaryLocation">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Datum & Tijd:</span>
+                            <strong id="summaryDateTime">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Duur:</span>
+                            <strong id="summaryDuration">-</strong>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Totaal:</span>
+                            <strong id="summaryPrice">€0,00</strong>
+                        </div>
+                    </div>
+
+                    <form class="customer-form" id="customerForm">
+                        <div class="form-group">
+                            <label for="fullName">Volledige naam *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mailadres *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefoonnummer *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Opmerkingen (optioneel)</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Heeft u specifieke wensen of vragen?"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Ik ga akkoord met de <a href="#" target="_blank">algemene voorwaarden</a> en het <a href="#" target="_blank">privacybeleid</a> *</label>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="googleCalendar" name="googleCalendar">
+                            <label for="googleCalendar">Voeg afspraak toe aan mijn Google Agenda</label>
+                        </div>
+                    </form>
+
+                    <div class="booking-actions">
+                        <button class="btn-back" onclick="goToStep(2)"><i class="fas fa-arrow-left"></i> Terug</button>
+                        <button class="btn-next" onclick="goToStep(4)">Naar betaling <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Payment -->
+                <div class="booking-step" id="step4" style="display: none;">
+                    <h2 class="step-title">Betaling</h2>
+                    <p class="step-description">Kies uw betaalmethode</p>
+                    
+                    <!-- Final Summary -->
+                    <div class="booking-summary final">
+                        <h3>Overzicht van uw afspraak:</h3>
+                        <div class="summary-item">
+                            <span>Behandeling:</span>
+                            <strong id="finalTreatment">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Locatie:</span>
+                            <strong id="finalLocation">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Datum & Tijd:</span>
+                            <strong id="finalDateTime">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Naam:</span>
+                            <strong id="finalName">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Email:</span>
+                            <strong id="finalEmail">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Telefoon:</span>
+                            <strong id="finalPhone">-</strong>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-item total">
+                            <span>Te betalen:</span>
+                            <strong id="finalPrice">€0,00</strong>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                        <h3>Selecteer betaalmethode:</h3>
+                        
+                        <div class="payment-option" data-method="local">
+                            <div class="payment-radio">
+                                <input type="radio" name="payment" id="paymentLocal" value="local" checked>
+                                <label for="paymentLocal">
+                                    <i class="fas fa-money-bill-wave" style="font-size: 30px; color: #27ae60;"></i>
+                                    <span>Betalen op Lokatie</span>
+                                </label>
+                            </div>
+                            <p class="payment-description">Betaal contant of met PIN bij aankomst in de salon</p>
+                        </div>
+                        
+                        <div class="payment-option" data-method="ideal">
+                            <div class="payment-radio">
+                                <input type="radio" name="payment" id="paymentIdeal" value="ideal">
+                                <label for="paymentIdeal">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/ING_Group_N.V._Logo.svg/120px-ING_Group_N.V._Logo.svg.png" alt="iDEAL" style="height: 30px;">
+                                    <span>iDEAL</span>
+                                </label>
+                            </div>
+                            <p class="payment-description">Betaal nu online via uw bank</p>
+                        </div>
+
+                        <div class="payment-option" data-method="paypal">
+                            <div class="payment-radio">
+                                <input type="radio" name="payment" id="paymentPaypal" value="paypal">
+                                <label for="paymentPaypal">
+                                    <i class="fab fa-paypal" style="font-size: 30px; color: #0070ba;"></i>
+                                    <span>PayPal</span>
+                                </label>
+                            </div>
+                            <p class="payment-description">Betaal veilig met uw PayPal account</p>
+                        </div>
+
+                        <div class="payment-option" data-method="card">
+                            <div class="payment-radio">
+                                <input type="radio" name="payment" id="paymentCard" value="card">
+                                <label for="paymentCard">
+                                    <i class="fas fa-credit-card" style="font-size: 30px; color: #2E7A85;"></i>
+                                    <span>Credit Card</span>
+                                </label>
+                            </div>
+                            <p class="payment-description">Betaal met uw credit of debit card</p>
+                        </div>
+                    </div>
+
+                    <!-- Stripe Payment Container -->
+                    <div id="stripePaymentContainer" style="display: none; margin-top: 2rem;">
+                        <div id="card-element" class="stripe-card-element">
+                            <!-- Stripe.js will insert card input here -->
+                        </div>
+                        <div id="card-errors" role="alert" class="payment-error"></div>
+                    </div>
+
+                    <!-- iDEAL Bank Selection -->
+                    <div id="idealBankContainer" style="display: none; margin-top: 2rem;">
+                        <label for="idealBank">Selecteer uw bank:</label>
+                        <select id="idealBank" class="form-control">
+                            <option value="">Kies uw bank...</option>
+                            <option value="abn_amro">ABN AMRO</option>
+                            <option value="ing">ING</option>
+                            <option value="rabobank">Rabobank</option>
+                            <option value="sns">SNS Bank</option>
+                            <option value="triodos">Triodos Bank</option>
+                            <option value="van_lanschot">Van Lanschot</option>
+                            <option value="knab">Knab</option>
+                            <option value="bunq">bunq</option>
+                            <option value="regiobank">RegioBank</option>
+                            <option value="revolut">Revolut</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-actions">
+                        <button class="btn-back" onclick="goToStep(3)"><i class="fas fa-arrow-left"></i> Terug</button>
+                        <button class="btn-complete" onclick="processPayment()" id="completeBookingBtn">
+                            <i class="fas fa-check"></i> Afspraak Bevestigen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Confirmation Step -->
+                <div class="booking-step" id="stepConfirmation" style="display: none;">
+                    <div class="confirmation-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h2>Afspraak Bevestigd!</h2>
+                        <p>Bedankt voor uw boeking. U ontvangt een bevestigingsmail met de details en factuur.</p>
+                        
+                        <div class="confirmation-details">
+                            <h3>Uw afspraak:</h3>
+                            <div id="confirmationSummary"></div>
+                        </div>
+
+                        <div class="confirmation-actions">
+                            <a href="index.html" class="btn btn-primary">Terug naar Home</a>
+                            <button onclick="downloadInvoice()" class="btn btn-outline">
+                                <i class="fas fa-download"></i> Download Factuur
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="booking-sidebar">
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Openingstijden</h3>
+                    <ul>
+                        <li><strong>Leerdam (Vrijdagen):</strong> 09:00 - 18:00</li>
+                        <li><strong>Roelofarendsveen (Dinsdagen):</strong> 09:00 - 18:00</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Hygiëne Garantie</h3>
+                    <p>Alle instrumenten worden na elke behandeling professioneel gesteriliseerd volgens de hoogste hygiënenormen.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-undo"></i>
+                    <h3>Annuleringsbeleid</h3>
+                    <p>Annuleren kan tot 24 uur voor uw afspraak kosteloos. Bij latere annulering brengen wij 50% van de behandelkosten in rekening.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logoupscale.png" alt="Agape Pedicure" style="height: 60px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1rem;">
+                    <p>Premium voetenverzorging in een luxueuze en serene omgeving. Wij staan voor kwaliteit, hygiëne en persoonlijke aandacht.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Snelle Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Welkom</a></li>
+                        <li><a href="index.html#over">Over Ons</a></li>
+                        <li><a href="index.html#diensten">Behandelingen</a></li>
+                        <li><a href="tarieven.html">Tarieven</a></li>
+                        <li><a href="webshop.html">Webshop</a></li>
+                        <li><a href="boeken.html">Maak Een Afspraak</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Informatie</h4>
+                    <ul>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#cookies">Cookies Beleid</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Locatie's</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <div>
+                                <strong>Leerdam</strong><br>
+                                Eiland 1, unit 0.6<br>
+                                4143 EN Leerdam<br>
+                                <em>(Op de vrijdagen)</em>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> 
+                            <div>
+                                <strong>Roelofarendsveen</strong><br>
+                                Stationsstraat 1V<br>
+                                2371 SH Roelofarendsveen<br>
+                                <em>(Op de dinsdagen)</em>
+                            </div>
+                        </li>
+                        <li><i class="fas fa-phone"></i> 06 49121690</li>
+                        <li><i class="fas fa-envelope"></i> info@agapepedicure.nl</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agape Pedicure. Alle rechten voorbehouden.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacybeleid</a>
+                    <a href="#cookies">Algemene Voorwaarden</a>
+                    <a href="#cookies">Cookie Beleid</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
+    <!-- Google Calendar API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script src="booking-system.js"></script>
+</body>
+</html>
+
