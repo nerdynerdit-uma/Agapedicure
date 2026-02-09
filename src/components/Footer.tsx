@@ -31,6 +31,9 @@ const socialLinks = [
   { icon: 'linkedin', href: 'https://linkedin.com', label: 'LinkedIn' },
 ]
 
+const whatsappNumber = '31649121690'
+const whatsappUrl = `https://wa.me/${whatsappNumber}`
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-white pt-20 pb-8">
@@ -51,7 +54,7 @@ export default function Footer() {
               Wij staan voor kwaliteit, hygiëne en persoonlijke aandacht.
             </p>
             {/* Social Links */}
-            <div className="flex gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.icon}
@@ -64,6 +67,16 @@ export default function Footer() {
                   <span className="text-lg">{getSocialIcon(social.icon)}</span>
                 </a>
               ))}
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold transition-all duration-300 hover:scale-105"
+              >
+                WhatsApp
+                <span className="text-lg">💬</span>
+              </a>
             </div>
           </div>
 

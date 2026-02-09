@@ -18,7 +18,6 @@ const navItems: NavItem[] = [
     label: 'Behandelingen', 
     href: '#services',
     submenu: [
-      { label: 'Manicure', href: '#manicure' },
       { label: 'Pedicure', href: '#pedicure' },
       { label: 'Voet Massage', href: '#voetmassage' },
     ]

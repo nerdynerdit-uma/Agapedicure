@@ -51,7 +51,7 @@ export default function About() {
             <div>
               <SectionHeading
                 subtitle="Over Ons"
-                title="Welkom bij Agape Pedicure"
+                title="Agapè Pedicure & Wellness Salon"
                 centered={false}
                 className="text-left"
               />
@@ -64,7 +64,7 @@ export default function About() {
 
                 <p>
                   Onze pedicurebehandelingen en ontspannende massages bieden de zorg die uw voeten en lichaam 
-                  verdienen. Onze specialisten zorgen voor gezonde, stralende voeten en een totale 
+                  verdienen. Onze specialisten zorgen voor gezonde, verzorgde voeten en een totale 
                   ontspanningservaring.
                 </p>
 

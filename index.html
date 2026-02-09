@@ -58,13 +58,18 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Welkom</a></li>
-                <li><a href="#over" class="nav-link">Over Ons</a></li>
+                <li class="dropdown">
+                    <a href="#over" class="nav-link">Over Ons <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ons-verhaal.html">Ons verhaal</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="#diensten" class="nav-link">Behandelingen <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#manicure">Manicure</a></li>
-                        <li><a href="#pedicure">Pedicure</a></li>
-                        <li><a href="#voetmassage">Voet Massage</a></li>
+                        <li><a href="pedicurebehandeling.html">Pedicure</a></li>
+                        <li><a href="voetmassage.html">Voet Massage</a></li>
                     </ul>
                 </li>
                 <li><a href="tarieven.html" class="nav-link">Tarieven</a></li>
@@ -84,7 +89,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">Over Ons</span>
-                <h2 class="section-title">Welkom bij Agape Pedicure</h2>
+                <h2 class="section-title">Agapè Pedicure & Wellness Salon</h2>
                 <div class="section-divider"></div>
             </div>
             <div class="about-content">
@@ -93,7 +98,7 @@
                 </div>
                 <div class="about-text">
                     <p class="lead">Bij Agape Pedicure geloven wij dat voetenverzorging meer is dan alleen een behandeling - het is een ervaring van pure ontspanning en zelfzorg.</p>
-                    <p>Onze pedicurebehandelingen en ontspannende massages bieden de zorg die uw voeten en lichaam verdienen. Onze specialisten zorgen voor gezonde, stralende voeten en een totale ontspanningservaring.</p>
+                    <p>Onze pedicurebehandelingen en ontspannende massages bieden de zorg die uw voeten en lichaam verdienen. Onze specialisten zorgen voor gezonde, verzorgde voeten en een totale ontspanningservaring.</p>
                     <div class="about-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
@@ -121,7 +126,7 @@
     <section class="why-choose" id="waarom">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">What We Do</span>
+                <span class="section-subtitle">wat we doen</span>
                 <h2 class="section-title">Waarom Kiezen Voor Agape Pedicure?</h2>
             </div>
             
@@ -160,7 +165,7 @@
                         <div class="feature-icon">
                             <i class="fas fa-hand-holding-heart"></i>
                         </div>
-                        <h3>Holistische Benadering</h3>
+                        <h3>Voor lichaam en geest Benadering</h3>
                         <p>Combineer pedicure met voet- en stoelmassages voor een complete wellnesservaring die zowel lichaam als geest verfrist.</p>
                     </div>
                 </div>
@@ -382,7 +387,6 @@
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -390,6 +394,8 @@
                     <ul>
                         <li><a href="#home">Welkom</a></li>
                         <li><a href="#over">Over Ons</a></li>
+                        <li><a href="ons-verhaal.html">Ons verhaal</a></li>
+                        <li><a href="partners.html">Partners</a></li>
                         <li><a href="#diensten">Behandelingen</a></li>
                         <li><a href="tarieven.html">Tarieven</a></li>
                         <li><a href="webshop.html">Webshop</a></li>
@@ -400,13 +406,14 @@
                 <div class="footer-section">
                     <h4>Informatie</h4>
                     <ul>
-                        <li><a href="#faqs">FAQs</a></li>
-                        <li><a href="#cookies">Cookies Beleid</a></li>
-                        <li><a href="#privacy">Privacy Statement</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="cookies-beleid.html">Cookies Beleid</a></li>
+                        <li><a href="privacy-beleid.html">Privacy Beleid</a></li>
+                        <li><a href="algemene-voorwaarden.html">Algemene Voorwaarden</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Locatie's</h4>
+                    <h4>Locaties</h4>
                     <ul class="contact-list">
                         <li>
                             <i class="fas fa-map-marker-alt"></i> 
@@ -426,18 +433,16 @@
                                 <em>(Op de dinsdagen)</em>
                             </div>
                         </li>
-                        <li><i class="fas fa-phone"></i> 06 49121690</li>
+                        <li class="contact-phone-whatsapp">
+                            <span><i class="fas fa-phone"></i> 06 49121690</span>
+                            <a href="https://wa.me/31649121690" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="WhatsApp">WhatsApp <i class="fab fa-whatsapp"></i></a>
+                        </li>
                         <li><i class="fas fa-envelope"></i> info@agapepedicure.nl</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Agape Pedicure. Alle rechten voorbehouden.</p>
-                <div class="footer-links">
-                    <a href="#">Privacybeleid</a>
-                    <a href="#">Algemene Voorwaarden</a>
-                    <a href="#">Cookie Beleid</a>
-                </div>
+                <p>&copy; 2026 Agape Pedicure. Alle rechten voorbehouden. | Ontworpen door <a href="https://www.nerdynerdit.com" target="_blank" rel="noopener noreferrer">Nerdy Nerd IT</a></p>
             </div>
         </div>
     </footer>
