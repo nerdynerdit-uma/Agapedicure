@@ -8,8 +8,8 @@ if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-// Copy HTML files
-['index.html', 'webshop.html', 'boeken.html', 'tarieven.html', 'checkout.html', 'order-bevestiging.html'].forEach(file => {
+// Copy HTML files (include all submenu and info pages for Vercel deploy)
+['index.html', 'webshop.html', 'boeken.html', 'tarieven.html', 'checkout.html', 'order-bevestiging.html', 'ons-verhaal.html', 'partners.html', 'pedicurebehandeling.html', 'voetmassage.html', 'faqs.html', 'cookies-beleid.html', 'privacy-beleid.html', 'algemene-voorwaarden.html'].forEach(file => {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, path.join(distDir, file));
     console.log(`Copied ${file}`);
