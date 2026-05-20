@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     height: 100vh;
     min-height: 700px;
-    background: url('images/heroupscale.jpg') center/cover no-repeat;
+    background: url('images/agape-banner.jpg') center/cover no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -431,6 +431,22 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dark-gray);
     font-size: 1rem;
     line-height: 1.7;
+}
+
+/* Why-choose video */
+.why-choose-video-wrap {
+    width: 100%;
+    max-width: 900px;
+    margin: var(--spacing-xl) auto 0;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: #000;
+}
+
+.why-choose-video {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Circular Images */
@@ -611,15 +627,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-image {
     position: relative;
-    border-radius: var(--radius-xl);
+    border-radius: 0;
     overflow: hidden;
     box-shadow: var(--shadow-xl);
 }
 
 .about-image img {
     width: 100%;
-    height: 600px;
+    height: 750px;
     object-fit: cover;
+    object-position: center top;
     transition: var(--transition-slow);
 }
 
@@ -1381,7 +1398,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-item {
     position: relative;
-    border-radius: var(--radius-xl);
+    border-radius: 0;
     overflow: hidden;
     height: 400px;
     cursor: pointer;

@@ -28,7 +28,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/images/heroupscale.jpg)',
+            backgroundImage: 'url(/images/agape-banner.jpg)',
             filter: 'brightness(0.4)',
           }}
         />
