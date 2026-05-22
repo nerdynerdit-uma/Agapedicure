@@ -333,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     height: 100vh;
     min-height: 700px;
-    background: url('images/agape-banner.jpg') center/cover no-repeat;
+    background: url('images/products/hero1.jpeg') center/cover no-repeat;
     background-size: cover;
     background-position: center;
 }
