@@ -9,7 +9,7 @@ if (!fs.existsSync(distDir)) {
 }
 
 // Copy HTML files (include all submenu and info pages for Vercel deploy)
-['index.html', 'webshop.html', 'boeken.html', 'tarieven.html', 'checkout.html', 'order-bevestiging.html', 'ons-verhaal.html', 'partners.html', 'voetmassage.html', 'werkwijze.html', 'medische-pedicure.html', 'agape-spa-ritual.html', 'gellak-teennagels.html', 'agape-magnesium-ritual.html', 'nagelcorrectie.html', 'orthese.html', 'neuropathische-pijnmassage.html', 'faqs.html', 'cookies-beleid.html', 'privacy-beleid.html', 'algemene-voorwaarden.html'].forEach(file => {
+['index.html', 'webshop.html', 'boeken.html', 'tarieven.html', 'checkout.html', 'order-bevestiging.html', 'ons-verhaal.html', 'partners.html', 'voetmassage.html', 'werkwijze.html', 'medische-pedicure.html', 'agape-spa-ritual.html', 'gellak-teennagels.html', 'agape-magnesium-ritual.html', 'nagelcorrectie.html', 'orthese.html', 'neuropathische-pijnmassage.html', 'betalen-medische-pedicure.html', 'betalen-deelbehandeling.html', 'betalen-neuropathische-pijnmassage.html', 'betalen-agape-spa-ritual.html', 'betalen-agape-magnesium-ritual.html', 'betalen-nagelcorrectie.html', 'betalen-gellak-teennagels.html', 'betalen-orthese.html', 'betaling-status.html', 'contact.html', 'faqs.html', 'cookies-beleid.html', 'privacy-beleid.html', 'algemene-voorwaarden.html'].forEach(file => {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, path.join(distDir, file));
     console.log(`Copied ${file}`);
@@ -17,7 +17,7 @@ if (!fs.existsSync(distDir)) {
 });
 
 // Copy CSS files
-['styles.css', 'webshop.css', 'checkout.css', 'booking-system.css', 'booking-page.css'].forEach(file => {
+['styles.css', 'webshop.css', 'checkout.css', 'booking-system.css', 'booking-page.css', 'betaling.css', 'contact.css'].forEach(file => {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, path.join(distDir, file));
     console.log(`Copied ${file}`);
@@ -25,7 +25,7 @@ if (!fs.existsSync(distDir)) {
 });
 
 // Copy JS files
-['script.js', 'webshop.js', 'checkout.js', 'booking-system.js'].forEach(file => {
+['script.js', 'webshop.js', 'checkout.js', 'booking-system.js', 'betaling.js', 'contact.js'].forEach(file => {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, path.join(distDir, file));
     console.log(`Copied ${file}`);

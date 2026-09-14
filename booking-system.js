@@ -130,11 +130,19 @@ function loadGoogleCalendar(location, day) {
 
 function generateTimeSlots(location, day) {
     // Sample time slots - Replace with actual Google Calendar API data
-    const timeSlots = [
-        '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-        '13:00', '13:30', '14:00', '14:30', '15:00', '15:30',
-        '16:00', '16:30', '17:00', '17:30'
-    ];
+    const timeSlotsByLocation = {
+        // Leerdam: 08:00 - 15:00
+        leerdam: [
+            '08:00', '08:30', '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+            '13:00', '13:30', '14:00', '14:30'
+        ],
+        // Roelofarendsveen: 09:30 - 14:00
+        roelofarendsveen: [
+            '09:30', '10:00', '10:30', '11:00', '11:30',
+            '13:00', '13:30'
+        ]
+    };
+    const timeSlots = timeSlotsByLocation[location] || timeSlotsByLocation.roelofarendsveen;
     
     // Get next 4 weeks of the selected day
     const dates = getNext4Weeks(day);
@@ -164,19 +172,19 @@ function generateTimeSlots(location, day) {
     document.getElementById('googleCalendar').innerHTML = html;
 }
 
+// day can be a single day ("tuesday") or a comma-separated list ("monday,wednesday,thursday,friday")
 function getNext4Weeks(day) {
     const dates = [];
     const today = new Date();
-    const dayMap = { 'tuesday': 2, 'friday': 5 };
-    const targetDay = dayMap[day];
+    const dayMap = { 'monday': 1, 'tuesday': 2, 'wednesday': 3, 'thursday': 4, 'friday': 5 };
+    const targetDays = day.split(',').map(d => dayMap[d.trim()]);
     
-    let current = new Date(today);
-    let found = 0;
+    const current = new Date(today);
+    current.setDate(current.getDate() + 1);
     
-    while (found < 4) {
-        if (current.getDay() === targetDay && current > today) {
+    for (let i = 0; i < 28; i++) {
+        if (targetDays.includes(current.getDay())) {
             dates.push(new Date(current));
-            found++;
         }
         current.setDate(current.getDate() + 1);
     }

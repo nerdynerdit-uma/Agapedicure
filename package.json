@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "node build.js",
+    "preview": "node build.js && node --env-file-if-exists=.env.local dev-server.js",
     "start": "echo 'Static HTML site - no start needed'",
     "lint": "next lint",
     "type-check": "tsc --noEmit"

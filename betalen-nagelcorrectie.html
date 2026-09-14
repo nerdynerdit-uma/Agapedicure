@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ons verhaal - Agapè Pedicure & Wellness Salon, opgezet door Ester Doran">
-    <meta name="keywords" content="Agapè Pedicure, ons verhaal, Ester Doran, voetverzorging, wellness">
-    <title>Ons verhaal - Agapè Pedicure & Wellness Salon</title>
-    
-    <!-- Favicon -->
+    <meta name="description" content="Afspraak maken en betalen voor Nagelcorrectie bij Agap&#232; Pedicure &amp; Wellness Salon">
+    <meta name="keywords" content="voetmassage, ontspanning, drukpunten, doorbloeding">
+    <title>Betalen: Nagelcorrectie - Agapè Pedicure & Wellness Salon</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    
-    <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2E7A85">
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css?v=20260914">
+    <link rel="stylesheet" href="booking-system.css?v=20260914">
+    <link rel="stylesheet" href="betaling.css?v=20260914">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo">
@@ -37,9 +28,7 @@
                 </a>
             </div>
             <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html#home" class="nav-link">Welkom</a></li>
@@ -71,28 +60,74 @@
         </div>
     </nav>
 
-    <!-- Page Content -->
-    <section class="pricing-page">
+    <section class="pricing-page payment-page">
         <div class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
             <div class="section-header">
-                <span class="section-subtitle">Over Ons</span>
-                <h2 class="section-title">Ons verhaal</h2>
+                <span class="section-subtitle">Afspraak &amp; betalen</span>
+                <h2 class="section-title">Nagelcorrectie</h2>
                 <div class="section-divider"></div>
             </div>
-            <div class="page-content-text">
-                <p>Agapè Pedicure & Welness Salon is opgezet door Ester Doran. Ze heeft voor de naam ‘Agape’ gekozen omdat dit Griekse woord voor ‘liefde’ haar passie voor zorg en welzijn in onze samenleving heel duidelijk weerspiegelt.</p>
-                <p>Het woord Agapè betekent veel meer dan alleen maar liefde, het betekent unconditional love - onvoorwaardelijke liefde. En dus kan je wellicht onderstaande ook erbij noteren qua betekenis:</p>
-                <blockquote style="border-left: 3px solid #2E7A85; margin: 1.5rem 0; padding: 1rem 1.5rem; font-style: italic; color: #2E7A85; background: #f7fafa; border-radius: 0 8px 8px 0;">
-                    &ldquo;Daarom voelt Agape ook zo krachtig als naam: het ademt zorg, toewijding, zachtheid en die diepe, dragende liefde.&rdquo;
-                </blockquote>
-                <p>Ester is een sociaal persoon die altijd zeer begaan is met de gezondheid van vrienden en familie. En dat heeft haar liefde voor hand- en voetverzorging aangewakkerd. Na het volgen van de benodigde opleidingen is zij haar eigen salon in Roelofarendsveen gestart. En inmiddels zijn wij ook op de locatie Leerdam beschikbaar voor het maken van afspraken.</p>
-                <p>Bij Agapè Pedicure & Welness Salon geven wij hoogwaardige behandelingen door technieken te combineren uit de verschillende opleidingen. Tevens zijn wij bevoegd om mensen door te verwijzen naar specialisten als dat nodig is.</p>
-                <p>Goede verzorging van handen en voeten is essentieel voor onze dagelijkse gezondheid. Bij Agapè Pedicure & Welness Salon streven we naar eenheid tussen lichaam en geest. Kom en ervaar de liefdevolle zorg die wij bieden!</p>
+            <div class="payment-layout">
+                <form class="payment-form" id="paymentForm" data-treatment="nagelcorrectie">
+                    <div class="payment-summary">
+                        <span class="payment-summary-label">Behandeling</span>
+                        <strong class="payment-summary-name">Nagelcorrectie</strong>
+                        <span class="payment-summary-price">€35,00</span>
+                    </div>
+
+                    <h3 class="payment-step">1. Kies uw locatie</h3>
+                    <div class="location-selection">
+                        <label class="location-card">
+                            <input type="radio" name="location" value="leerdam" required>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Leerdam</h3>
+                            <p>Eiland 1, unit 0.6<br>4143 EN Leerdam</p>
+                            <span class="location-day">Ma, Wo, Do &amp; Vr &middot; 8:00-15:00</span>
+                        </label>
+                        <label class="location-card">
+                            <input type="radio" name="location" value="roelofarendsveen" required>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Roelofarendsveen</h3>
+                            <p>Stationsstraat 1V<br>2371 SH Roelofarendsveen</p>
+                            <span class="location-day">Dinsdag &middot; 9:30-14:00</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">2. Kies een dag *</label>
+                        <select id="date" name="date" class="form-control" required disabled>
+                            <option value="">Kies eerst een locatie</option>
+                        </select>
+                        <p class="payment-hint">Wij nemen contact met u op om de exacte tijd af te spreken.</p>
+                    </div>
+
+                    <h3 class="payment-step">3. Uw gegevens</h3>
+                    <div class="form-group">
+                        <label for="name">Volledige naam *</label>
+                        <input type="text" id="name" name="name" class="form-control" autocomplete="name" maxlength="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefoonnummer *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" autocomplete="tel" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mailadres *</label>
+                        <input type="email" id="email" name="email" class="form-control" autocomplete="email" maxlength="120" required>
+                    </div>
+
+                    <div class="payment-method">
+                        <span>Betaalmethode</span>
+                        <strong><i class="fas fa-building-columns"></i> iDEAL | Wero</strong>
+                    </div>
+
+                    <div class="payment-error" id="paymentError" role="alert" hidden></div>
+                    <button type="submit" class="btn btn-primary payment-submit"><i class="fas fa-lock"></i> Betaal €35,00 met iDEAL | Wero</button>
+                    <p class="payment-hint">U wordt doorgestuurd naar uw eigen bank om veilig te betalen.</p>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
@@ -126,21 +161,15 @@
                     <h4>Locaties</h4>
                     <ul class="contact-list">
                         <li>
-                            <i class="fas fa-map-marker-alt"></i> 
+                            <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <strong>Leerdam</strong><br>
-                                Eiland 1, unit 0.6<br>
-                                4143 EN Leerdam<br>
-                                <em>(Maandag, Woensdag, Donderdag, Vrijdag 8:00-15:00)</em>
+                                <strong>Leerdam</strong><br>Eiland 1, unit 0.6<br>4143 EN Leerdam<br><em>(Maandag, Woensdag, Donderdag, Vrijdag 8:00-15:00)</em>
                             </div>
                         </li>
                         <li>
-                            <i class="fas fa-map-marker-alt"></i> 
+                            <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <strong>Roelofarendsveen</strong><br>
-                                Stationsstraat 1V<br>
-                                2371 SH Roelofarendsveen<br>
-                                <em>(Op de Dinsdagen 9:30-14:00)</em>
+                                <strong>Roelofarendsveen</strong><br>Stationsstraat 1V<br>2371 SH Roelofarendsveen<br><em>(Op de Dinsdagen 9:30-14:00)</em>
                             </div>
                         </li>
                         <li class="contact-phone-whatsapp">
@@ -157,12 +186,8 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Custom JavaScript -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll naar boven"><i class="fas fa-chevron-up"></i></button>
     <script src="script.js"></script>
+    <script src="betaling.js?v=20260914"></script>
 </body>
 </html>

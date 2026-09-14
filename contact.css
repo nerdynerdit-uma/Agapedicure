@@ -1,0 +1,67 @@
+/* Contact page */
+
+.contact-layout {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-form,
+.contact-success {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+}
+
+.contact-form textarea.form-control {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* Hidden spam trap: people never see it, bots fill it in */
+.contact-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.contact-error {
+    background: #fdecec;
+    color: #9b1c1c;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-submit {
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.contact-success {
+    text-align: center;
+}
+
+.contact-success i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-alt {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    color: var(--dark-gray);
+}
+
+.contact-alt a {
+    color: var(--primary-color);
+    font-weight: 500;
+}

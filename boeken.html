@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260914">
     <link rel="stylesheet" href="booking-page.css">
     <link rel="stylesheet" href="booking-system.css">
 </head>
@@ -56,7 +56,7 @@
                     <a href="index.html#diensten" class="nav-link">Behandelingen <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="werkwijze.html">Werkwijze</a></li>
-                        <li><a href="medische-pedicure.html">Medische Pedicure</a></li>
+                        <li><a href="medische-pedicure.html">(Medische) Pedicure</a></li>
                         <li><a href="voetmassage.html">Voet Massage</a></li>
                         <li><a href="agape-spa-ritual.html">Agap&#232; Spa Ritual</a></li>
                         <li><a href="gellak-teennagels.html">Gellak Teennagels</a></li>
@@ -67,7 +67,7 @@
                     </ul>
                 </li>
                 <li><a href="tarieven.html" class="nav-link">Tarieven</a></li>
-                <li><a href="index.html#footer" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
                 <li><a href="boeken.html" class="nav-link btn-nav active">Maak Een Afspraak</a></li>
             </ul>
         </div>
@@ -117,17 +117,6 @@
                     
                     <div class="treatment-selection-grid">
                         <!-- Treatment Options -->
-                        <div class="treatment-option" data-treatment="deluxe" data-price="47.50" data-duration="60">
-                            <div class="treatment-header">
-                                <h3>Agape Deluxe Pedicure</h3>
-                                <span class="treatment-badge">Populair</span>
-                            </div>
-                            <p class="treatment-desc">Pedicure met volledige verzorging</p>
-                            <div class="treatment-meta">
-                                <span class="price">€47,50</span>
-                            </div>
-                        </div>
-
                         <div class="treatment-option" data-treatment="medisch" data-price="50.00" data-duration="60">
                             <div class="treatment-header">
                                 <h3>Medisch Pedicure</h3>
@@ -136,26 +125,6 @@
                             <p class="treatment-desc">Voor diabetische en risico voeten</p>
                             <div class="treatment-meta">
                                 <span class="price">€50,00</span>
-                            </div>
-                        </div>
-
-                        <div class="treatment-option" data-treatment="bindweefsel-50" data-price="80.00" data-duration="50">
-                            <div class="treatment-header">
-                                <h3>Gezichtsbehandeling</h3>
-                            </div>
-                            <p class="treatment-desc">Hele gelaatsbehandeling</p>
-                            <div class="treatment-meta">
-                                <span class="price">€80,00</span>
-                            </div>
-                        </div>
-
-                        <div class="treatment-option" data-treatment="bindweefsel-30" data-price="35.00" data-duration="30">
-                            <div class="treatment-header">
-                                <h3>Nek en Rug</h3>
-                            </div>
-                            <p class="treatment-desc">Ontspan volledig met deze nek en rugmassage gericht op het losmaken van gespannen spieren en het verlichten van dagelijkse stress.</p>
-                            <div class="treatment-meta">
-                                <span class="price">€35,00</span>
                             </div>
                         </div>
 
@@ -215,11 +184,11 @@
                             <p>Stationsstraat 1V<br>2371 SH Roelofarendsveen</p>
                             <span class="location-day">Alleen Dinsdagen</span>
                         </div>
-                        <div class="location-card" data-location="leerdam" data-day="friday">
+                        <div class="location-card" data-location="leerdam" data-day="monday,wednesday,thursday,friday">
                             <i class="fas fa-map-marker-alt"></i>
                             <h3>Leerdam</h3>
                             <p>Eiland 1, unit 0.6<br>4143 EN Leerdam</p>
-                            <span class="location-day">Alleen Vrijdagen</span>
+                            <span class="location-day">Maandag, Woensdag, Donderdag &amp; Vrijdag</span>
                         </div>
                     </div>
 
@@ -460,8 +429,8 @@
                     <i class="fas fa-clock"></i>
                     <h3>Openingstijden</h3>
                     <ul>
-                        <li><strong>Leerdam (Vrijdagen):</strong> 08:00 - 17:00</li>
-                        <li><strong>Roelofarendsveen (Dinsdagen):</strong> 09:00 - 17:00</li>
+                        <li><strong>Leerdam (Ma, Wo, Do, Vr):</strong> 08:00 - 15:00</li>
+                        <li><strong>Roelofarendsveen (Dinsdagen):</strong> 09:30 - 14:00</li>
                     </ul>
                 </div>
                 <div class="info-card">
@@ -503,7 +472,7 @@
                         <li><a href="index.html#diensten">Behandelingen</a></li>
                         <li><a href="tarieven.html">Tarieven</a></li>
                         <li><a href="boeken.html">Maak Een Afspraak</a></li>
-                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -524,7 +493,7 @@
                                 <strong>Leerdam</strong><br>
                                 Eiland 1, unit 0.6<br>
                                 4143 EN Leerdam<br>
-                                <em>(Op de vrijdagen)</em>
+                                <em>(Maandag, Woensdag, Donderdag, Vrijdag 8:00-15:00)</em>
                             </div>
                         </li>
                         <li>
@@ -533,7 +502,7 @@
                                 <strong>Roelofarendsveen</strong><br>
                                 Stationsstraat 1V<br>
                                 2371 SH Roelofarendsveen<br>
-                                <em>(Op de dinsdagen)</em>
+                                <em>(Op de Dinsdagen 9:30-14:00)</em>
                             </div>
                         </li>
                         <li class="contact-phone-whatsapp">
